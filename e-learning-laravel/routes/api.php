@@ -43,8 +43,8 @@ Route::post('/signin', [UserController::class, 'signinPost']);
 Route::get('/users', [UserController::class, 'getAll']);
 Route::get('/users/{id}', [UserController::class, 'getOne']);
 Route::post('/users/', [UserController::class, 'addOne']);
-Route::post('/users/', [UserController::class, 'update']);
-Route::get('/users/{id}', [UserController::class, 'deleteOne']);
+Route::put('/users/', [UserController::class, 'update']);
+Route::delete('/users/{id}', [UserController::class, 'deleteOne']);
 
 
 // Course CRUD
@@ -52,13 +52,13 @@ Route::get('/users/{id}', [UserController::class, 'deleteOne']);
 Route::get('/courses', [CourseController::class, 'getAll']);
 Route::get('/courses/{id}', [CourseController::class, 'getOne']);
 Route::post('/courses/', [CourseController::class, 'addOne']);
-Route::post('/courses/', [CourseController::class, 'update']);
-Route::get('/courses/{id}', [CourseController::class, 'deleteOne']);
+Route::put('/courses/', [CourseController::class, 'update']);
+Route::delete('/courses/{id}', [CourseController::class, 'deleteOne']);
 
 // Question CRUD
 
 Route::get('/questions', [QuestionController::class, 'getAll']);
 Route::get('/questions/{id}', [QuestionController::class, 'getOne']);
 Route::post('/questions/', [QuestionController::class, 'addOne']);
-Route::post('/questions/', [QuestionController::class, 'update']);
-Route::get('/questions/{id}', [QuestionController::class, 'deleteOne']);
+Route::put('/questions/', [QuestionController::class, 'update']);
+Route::delete('/questions/{id}', [QuestionController::class, 'deleteOne']);
